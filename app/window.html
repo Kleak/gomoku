@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <script src="./js/main.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <div id="state">Connection ...</div>
+
+    <canvas id="board" width="800" height="800" style="position: absolute; top: 0px; left: 0px; margin: 0; float: left;">
+        You browser version is too old.
+    </canvas>
+
+    <div style="float: right; width: 150px;">
+        <strong>Mode de jeu</strong><br />
+        <input type="button" id="pvp" value="PVP" style="width: 150px;" /><br />
+
+        <div id="info_box" style="width: 200px; height: 150px;"></div>
+
+        <div id="rules" style="display: none;">
+            Règle Double 3<br />
+            <div class="switch_button">
+                <input type="checkbox" name="switch_button" class="switch_button-checkbox" id="myswitch_button">
+                <label class="switch_button-label" for="myswitch_button">
+                    <div class="switch_button-inner"></div>
+                    <div class="switch_button-switch"></div>
+                </label>
+            </div>
+            <br /><br />
+            Règle 5 cassant<br />
+             <div class="switch_button1">
+                <input type="checkbox" name="switch_button1" class="switch_button1-checkbox" id="myswitch1_button">
+                <label class="switch_button1-label" for="myswitch1_button">
+                    <div class="switch_button1-inner"></div>
+                    <div class="switch_button1-switch"></div>
+                </label>
+            </div>
+        </div>
+
+
+        <img src="./img/1.png" id="pi1" style="display: none" id="pion1" />
+        <img src="./img/2.png" id="pi2" style="display: none" id="pion2" />
+    </div>
+
+    <div id="backscreen"></div>
+    <div id="pvp_mod" class="box" style="display: none;"> <!-- DEFAULT NONE DISPLAY -->
+        <div id="close_pvp"></div>
+        <div style="width: 300px; margin: auto;">
+            <input type="text" id="pvp_channel" placeholder="Clé du channel" class="center" /><br /><br />
+            <input type="button" id="target_channel" value="Rejoindre ce channel" /> <input type="button" id="random_channel" value="Adversaire Aléatoire" />
+        </div>
+    </div>
+
+    <div id="pve_mod" class="box" style="display: none;"> <!-- DEFAULT NONE DISPLAY -->
+        <div id="close_pve"></div>
+        <div style="width: 300px; margin: auto;">
+            <input type="text" id="pve_channel" placeholder="Clé du channel" class="center" /><br /><br />
+            <input type="button" id="target_channel_pve" value="Rejoindre ce channel" />
+        </div>
+    </div>
+
+    <div id="log_box" class="box" style="display: none;"> <!-- DEFAULT NONE DISPLAY -->
+        <div id="close_login"></div>
+        <div style="width: 300px; margin: auto;">
+            <input type="text" id="login" placeholder="Votre login" class="center" /><br /><br />
+            <input type="button" id="send_login" value="Envoyer" />
+        </div>
+    </div>
+
+    <div id="modBox" class="box" style="display: none;"> <!-- DEFAULT NONE DISPLAY -->
+        <div id="close_mod"></div>
+        <div style="width: 300px; margin: auto;">
+            <input type="button" id="modPVP" value="MODE PVP" />
+        </div>
+    </div>
+
+    <div id="notification" class="box" style="display: none;"> <!-- DEFAULT NONE DISPLAY -->
+        <div id="close_notification"></div>
+        <div style="width: 300px; margin: auto;" id="content_notification">
+
+        </div>
+    </div>
+
+    <div id="loading" class="box_load">
+        <div style="width: 300px; margin: auto;">
+            <img id="loading" src="./img/loading.gif" alt="" style="width: 43px; margin: auto;" />
+        </div>
+    </div>
+
+    <audio controls id="win">
+        <source src="res/win.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio controls id="loose">
+            <source src="res/loose.mp3" type="audio/mpeg">
+            </audio>
+
+            <div id="toast" style="display: none;"></div>
+
+            <img src="./img/close.png" alt="Close" id="close" />
+            <img src="./img/move.png" alt="move" id="move" />
+        </body>
+        </html>
+
